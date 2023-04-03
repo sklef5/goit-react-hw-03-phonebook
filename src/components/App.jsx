@@ -14,7 +14,7 @@ export class App extends Component {
 
   createNewContact = currentValue => {
     const alreadyAdded = this.state.contacts.some(
-      obj => obj.name === currentValue.name
+      obj => obj.name.toLowerCase() === currentValue.name.toLowerCase()
     );
     alreadyAdded
       ? alert(`${currentValue.name} is already in contacts`)
